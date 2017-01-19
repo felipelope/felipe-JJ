@@ -15,14 +15,12 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::get('/api/v1/jedis/{id?}', 'Jedis@index');
+Route::get('/jedi', function () {
+    return view('private/jedi');
+});
 
-
+Route::get('/home', function () {
+    return view('private/home');
+});
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

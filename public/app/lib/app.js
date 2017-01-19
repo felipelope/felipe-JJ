@@ -1,2 +1,3 @@
-var app = angular.module('jediRecords', [])
-		.constant('API_URL', 'http://ProjetoJetJedi.dev/');
+var app = angular.module('app', [])
+
+	.constant('API_ENDPOINT', { url: 'https://api.backand.com/' });
