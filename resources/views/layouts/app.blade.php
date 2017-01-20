@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,12 +47,11 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-left">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
+                        
+                            <li><a href="{{ url('/Home') }}"><% nav.home %></a></li>
+                            <li><a href="{{ url('/Jedis') }}"><% nav.jedis %></a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -82,10 +81,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
     <script src="/js/app.js"></script>
-    <script src="/app/lib/app.js"></script>
-    <script src="/app/controllers/controller.js"></script>
+    <script src="/app/app.js"></script>
     <script src="/app/services/service.js"></script>
+    <script src="/app/controllers/auth-controller.js"></script>
 </body>
 </html>
